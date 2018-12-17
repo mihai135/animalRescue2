@@ -1,13 +1,41 @@
 package org.fasttrackit;
 
-/**
- * Hello world!
- *
- */
-public class App 
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+
+        Food food = new Food();
+        food.name = "meat";
+        food.price = 50;
+        food.quantity = 3;
+        food.stock = true;
+
+        Recreation activity = new Recreation();
+        activity.name = "running";
+
+
+        Animal pet = new Animal();
+        pet.name = "Dog";
+        pet.age = 2;
+        pet.health = 7;
+        pet.hunger = 6;
+        pet.happiness = 9;
+        pet.foodName = food;
+        pet.prefActivity = activity;
+
+        Adopter adopter = new Adopter();
+        adopter.name = "Mike";
+        adopter.money = 200;
+
+        Vet doctor = new Vet();
+        doctor.name = "Harry";
+        doctor.specialization = "surgeon";
+
+
+
+
+
     }
 }
