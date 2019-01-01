@@ -1,6 +1,7 @@
 package org.fasttrackit;
 
 
+
 public class App
 {
     public static void main( String[] args )
@@ -12,8 +13,7 @@ public class App
         food.quantity = 3;
         food.stock = true;
 
-        Recreation activity = new Recreation();
-        activity.name = "running";
+        Recreation activity = new Recreation("running");
 
 
         Animal pet = new Animal();
@@ -25,12 +25,10 @@ public class App
         pet.foodName = food;
         pet.prefActivity = activity;
 
-        Adopter adopter = new Adopter();
-        adopter.name = "Mike";
+        Adopter adopter = new Adopter("Mike");
         adopter.money = 200;
 
-        Vet doctor = new Vet();
-        doctor.name = "Harry";
+        Vet doctor = new Vet("Harry");
         doctor.specialization = "surgeon";
 
 
