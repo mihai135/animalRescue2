@@ -1,7 +1,5 @@
 package org.fasttrackit;
 
-
-
 public class App
 {
     public static void main( String[] args )
@@ -42,11 +40,6 @@ public class App
 
         adopter.feeding (pet.getName(), food.getName());
         adopter.playing(pet.getName(), play.name);
-
-
-
-
-
 
 
     }
