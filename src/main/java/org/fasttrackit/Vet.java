@@ -1,10 +1,16 @@
 package org.fasttrackit;
 
-public class Vet extends Recreation {
+public class Vet {
 
+    String name;
     String specialization;
 
-    public Vet(String name) {
-        super(name);
+    public Vet (String name, String specialization){
+
+        this.name = name;
+        this.specialization = specialization;
+
     }
+
+
 }

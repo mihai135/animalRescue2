@@ -15,6 +15,12 @@ public class App
 
         Recreation activity = new Recreation("running");
 
+        Play1 play = new Play1("chasing ball");
+        play.place = "yard";
+
+        Play2 play2 = new Play2("playing");
+        play2.object = "stick";
+
 
         Animal pet = new Animal();
         pet.setName("dog");
@@ -25,11 +31,19 @@ public class App
         pet.setFoodName(food);
         pet.setPrefActivity(activity);
 
-        Adopter adopter = new Adopter("Mike");
-        adopter.money = 200;
+        Adopter adopter = new Adopter("Mike", 200);
 
-        Vet doctor = new Vet("Harry");
-        doctor.specialization = "surgeon";
+        Vet doctor = new Vet("Harry", "surgeon");
+
+        Game game = new Game();
+        game.adopter = adopter;
+        game.animal = pet;
+        game.vet = doctor;
+
+        adopter.feeding (pet.getName(), food.getName());
+        adopter.playing(pet.getName(), play.name);
+
+
 
 
 

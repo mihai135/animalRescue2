@@ -2,6 +2,12 @@ package org.fasttrackit;
 
 
 public class Food {
+
+    private String name;
+    private int price;
+    private int quantity;
+    private boolean stock;
+
     public String getName() {
         return name;
     }
@@ -34,9 +40,6 @@ public class Food {
         this.stock = stock;
     }
 
-    private String name;
-    private int price;
-    private int quantity;
-    private boolean stock;
+
 
 }
