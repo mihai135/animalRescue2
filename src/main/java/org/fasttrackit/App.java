@@ -8,22 +8,22 @@ public class App
     {
 
         Food food = new Food();
-        food.name = "meat";
-        food.price = 50;
-        food.quantity = 3;
-        food.stock = true;
+        food.setName("meat");
+        food.setPrice(5);
+        food.setQuantity(3);
+        food.setStock(true);
 
         Recreation activity = new Recreation("running");
 
 
         Animal pet = new Animal();
-        pet.name = "Dog";
-        pet.age = 2;
-        pet.health = 7;
-        pet.hunger = 6;
-        pet.happiness = 9;
-        pet.foodName = food;
-        pet.prefActivity = activity;
+        pet.setName("dog");
+        pet.setAge(3);
+        pet.setHealth(8);
+        pet.setHunger(6);
+        pet.setHappiness(9);
+        pet.setFoodName(food);
+        pet.setPrefActivity(activity);
 
         Adopter adopter = new Adopter("Mike");
         adopter.money = 200;

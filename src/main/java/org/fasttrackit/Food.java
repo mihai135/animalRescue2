@@ -2,10 +2,41 @@ package org.fasttrackit;
 
 
 public class Food {
+    public String getName() {
+        return name;
+    }
 
-    String name;
-    int price;
-    int quantity;
-    boolean stock;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public boolean isStock() {
+        return stock;
+    }
+
+    public void setStock(boolean stock) {
+        this.stock = stock;
+    }
+
+    private String name;
+    private int price;
+    private int quantity;
+    private boolean stock;
 
 }
