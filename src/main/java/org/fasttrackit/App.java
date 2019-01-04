@@ -6,22 +6,16 @@ public class App
     {
 
         Food food = new Food();
-        food.setName("meat");
+        food.setName("bones");
         food.setPrice(5);
         food.setQuantity(3);
         food.setStock(true);
 
         Recreation activity = new Recreation("running");
 
-        Play1 play = new Play1("chasing ball");
-        play.place = "yard";
-
-        Play2 play2 = new Play2("playing");
-        play2.object = "stick";
-
 
         Animal pet = new Animal();
-        pet.setName("dog");
+        pet.setName("Rex");
         pet.setAge(3);
         pet.setHealth(8);
         pet.setHunger(6);
@@ -29,7 +23,7 @@ public class App
         pet.setFoodName(food);
         pet.setPrefActivity(activity);
 
-        Adopter adopter = new Adopter("Mike", 200);
+        Adopter adopter = new Adopter("Michael", 200);
 
         Vet doctor = new Vet("Harry", "surgeon");
 
@@ -38,8 +32,9 @@ public class App
         game.animal = pet;
         game.vet = doctor;
 
-        adopter.feeding (pet.getName(), food.getName());
-        adopter.playing(pet.getName(), play.name);
+        adopter.feeding (pet, food);
+        adopter.playing(pet, activity);
+
 
 
     }

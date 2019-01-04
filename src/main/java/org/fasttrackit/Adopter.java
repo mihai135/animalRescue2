@@ -12,15 +12,14 @@ public class Adopter {
 
     }
 
+    public void feeding (Animal animal, Food food) {
 
-    public void feeding (String animal, String food) {
-
-        System.out.println(name + " just gave some " + food + " food to " + animal);
+        System.out.println(name + " just gave some " + food.getName()+ " food to " + animal.getName());
     }
 
-    public void playing (String animal, String activity){
+    public void playing (Animal animal, Recreation recreation){
 
-        System.out.println(name + " is playing " + activity + " with " + animal );
+        System.out.println(name + " is playing " + recreation.name + " with " + animal.getName() );
     }
 
 
