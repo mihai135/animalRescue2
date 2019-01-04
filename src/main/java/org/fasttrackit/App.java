@@ -23,6 +23,27 @@ public class App
         pet.setFoodName(food);
         pet.setPrefActivity(activity);
 
+        Dog dog = new Dog();
+        dog.setName("Azor");
+        dog.setAge(3);
+        dog.setHealth(8);
+        dog.setHunger(6);
+        dog.setHappiness(9);
+        dog.setFoodName(food);
+        dog.setPrefActivity(activity);
+        dog.furColor = "white";
+
+        Cat cat = new Cat();
+        cat.setName("Tom");
+        cat.setAge(3);
+        cat.setHealth(8);
+        cat.setHunger(6);
+        cat.setHappiness(9);
+        cat.setFoodName(food);
+        cat.setPrefActivity(activity);
+        cat.furPatern = "black white";
+
+
         Adopter adopter = new Adopter("Michael", 200);
 
         Vet doctor = new Vet("Harry", "surgeon");
