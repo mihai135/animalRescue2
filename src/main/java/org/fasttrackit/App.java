@@ -31,7 +31,7 @@ public class App
         dog.setHappiness(9);
         dog.setFoodName(food);
         dog.setPrefActivity(activity);
-        dog.furColor = "white";
+        dog.setFurColor("white");
 
         Cat cat = new Cat();
         cat.setName("Tom");
@@ -41,7 +41,7 @@ public class App
         cat.setHappiness(9);
         cat.setFoodName(food);
         cat.setPrefActivity(activity);
-        cat.furPatern = "black white";
+        cat.setFurPatern("black and white");
 
 
         Adopter adopter = new Adopter("Michael", 200);
@@ -49,9 +49,9 @@ public class App
         Vet doctor = new Vet("Harry", "surgeon");
 
         Game game = new Game();
-        game.adopter = adopter;
-        game.animal = pet;
-        game.vet = doctor;
+        game.setAdopter(adopter);
+        game.setAnimal(pet);
+        game.setVet(doctor);
 
         adopter.feeding (pet, food);
         adopter.playing(pet, activity);

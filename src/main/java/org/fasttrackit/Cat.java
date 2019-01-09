@@ -2,5 +2,13 @@ package org.fasttrackit;
 
 public class Cat extends Animal {
 
-    String furPatern;
+    private String furPatern;
+
+    public String getFurPatern() {
+        return furPatern;
+    }
+
+    public void setFurPatern(String furPatern) {
+        this.furPatern = furPatern;
+    }
 }
