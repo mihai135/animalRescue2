@@ -55,6 +55,9 @@ public class App
 
         adopter.feeding (pet, food);
         adopter.playing(pet, activity);
+        pet.happiness();
+        dog.happiness();
+        cat.happiness();
 
 
 

@@ -10,6 +10,11 @@ public class Animal {
     private Food foodName;
     private Recreation prefActivity;
 
+    public void happiness(){
+        String happy = "The animal is happy";
+        System.out.println(happy);
+    }
+
     public String getName() {
         return name;
     }
