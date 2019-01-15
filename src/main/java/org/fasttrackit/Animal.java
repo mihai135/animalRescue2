@@ -11,8 +11,7 @@ public class Animal {
     private Recreation prefActivity;
 
     public void happiness(){
-        String happy = "The animal is happy";
-        System.out.println(happy);
+        System.out.println("The animal is happy");
     }
 
     public String getName() {
