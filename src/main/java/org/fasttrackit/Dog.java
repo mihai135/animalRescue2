@@ -2,10 +2,7 @@ package org.fasttrackit;
 
 public class Dog extends Animal {
 
-    public static int dogHunger;
     private String furColor;
-
-
 
     @Override
     public void happiness() {

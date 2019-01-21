@@ -15,30 +15,30 @@ public class App
 
 
         Animal pet = new Animal();
-        pet.hunger = 8;
         pet.setName("Rex");
         pet.setAge(3);
         pet.setHealth(8);
-        pet.setHappiness(9);
+        pet.setHunger(7);
+        pet.setHappiness(5);
         pet.setFoodName(food);
         pet.setPrefActivity(activity);
 
         Animal dog = new Dog();
-        ((Dog) dog).dogHunger = 9;
         dog.setName("Azor");
         dog.setAge(3);
         dog.setHealth(8);
-        dog.setHappiness(9);
+        dog.setHunger(9);
+        dog.setHappiness(2);
         dog.setFoodName(food);
         dog.setPrefActivity(activity);
         ((Dog) dog).setFurColor("white");
 
         Animal cat = new Cat();
-        ((Cat) cat).catHunger = 5;
         cat.setName("Tom");
         cat.setAge(3);
         cat.setHealth(8);
-        cat.setHappiness(9);
+        cat.setHunger(5);
+        cat.setHappiness(4);
         cat.setFoodName(food);
         cat.setPrefActivity(activity);
         ((Cat) cat).setFurPatern("stripes");
@@ -54,16 +54,16 @@ public class App
         game.setVet(doctor);
 
         adopter.feeding (pet, food);
-        adopter.feedingDog ((Dog) dog, food);
-        adopter.feedingCat((Cat) cat,food );
+        adopter.feeding(dog, food);
+        adopter.feeding(cat, food);
 
         adopter.playing(pet, activity);
+        adopter.playing(dog, activity);
+        adopter.playing(cat, activity);
 
         pet.happiness();
         dog.happiness();
         cat.happiness();
-
-
 
     }
 }
