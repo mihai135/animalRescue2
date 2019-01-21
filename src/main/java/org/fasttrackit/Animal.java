@@ -2,10 +2,10 @@ package org.fasttrackit;
 
 public class Animal {
 
+    public static int hunger;
     private String name;
     private int age;
     private int health;
-    private int hunger;
     private int happiness;
     private Food foodName;
     private Recreation prefActivity;
@@ -36,14 +36,6 @@ public class Animal {
 
     public void setHealth(int health) {
         this.health = health;
-    }
-
-    public int getHunger() {
-        return hunger;
-    }
-
-    public void setHunger(int hunger) {
-        this.hunger = hunger;
     }
 
     public int getHappiness() {
