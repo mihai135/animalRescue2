@@ -23,7 +23,7 @@ public class App
         pet.setFoodName(food);
         pet.setPrefActivity(activity);
 
-        Dog dog = new Dog();
+        Animal dog = new Dog();
         dog.setName("Azor");
         dog.setAge(3);
         dog.setHealth(8);
@@ -31,9 +31,8 @@ public class App
         dog.setHappiness(9);
         dog.setFoodName(food);
         dog.setPrefActivity(activity);
-        dog.setFurColor("white");
 
-        Cat cat = new Cat();
+        Animal cat = new Cat();
         cat.setName("Tom");
         cat.setAge(3);
         cat.setHealth(8);
@@ -41,7 +40,6 @@ public class App
         cat.setHappiness(9);
         cat.setFoodName(food);
         cat.setPrefActivity(activity);
-        cat.setFurPatern("black and white");
 
 
         Adopter adopter = new Adopter("Michael", 200);
@@ -55,6 +53,7 @@ public class App
 
         adopter.feeding (pet, food);
         adopter.playing(pet, activity);
+
         pet.happiness();
         dog.happiness();
         cat.happiness();
