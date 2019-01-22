@@ -7,8 +7,8 @@ public class Animal {
     private int health;
     private int hunger;
     private int happiness;
-    private Food foodName;
-    private Recreation prefActivity;
+    private String favFood;
+    private String prefActivity;
 
     public void happiness(){
         System.out.println("The animal is happy");
@@ -54,19 +54,19 @@ public class Animal {
         this.happiness = happiness;
     }
 
-    public Food getFoodName() {
-        return foodName;
+    public String getFavFood() {
+        return favFood;
     }
 
-    public void setFoodName(Food foodName) {
-        this.foodName = foodName;
+    public void setFavFood(String favFood) {
+        this.favFood = favFood;
     }
 
-    public Recreation getPrefActivity() {
+    public String getPrefActivity() {
         return prefActivity;
     }
 
-    public void setPrefActivity(Recreation prefActivity) {
+    public void setPrefActivity(String prefActivity) {
         this.prefActivity = prefActivity;
     }
 }

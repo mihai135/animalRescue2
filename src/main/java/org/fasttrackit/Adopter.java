@@ -15,9 +15,14 @@ public class Adopter {
     public void feeding (Animal animal, Food food) {
         System.out.println();
         System.out.println(animal.getName() + "'s hunger level is " + animal.getHunger());
+        System.out.println(animal.getName() + "'s happiness level is " + animal.getHappiness());
         System.out.println(name + " just gave some " + food.getName()+ " food to " + animal.getName());
         animal.setHunger(animal.getHunger()-1);
+        if (food.getName()==animal.getFavFood()){
+            animal.setHappiness(animal.getHappiness()+1);
+        }
         System.out.println("The new hunger level is " + animal.getHunger());
+        System.out.println("The new happiness level is " + animal.getHappiness());
 
     }
 
@@ -25,7 +30,10 @@ public class Adopter {
         System.out.println();
         System.out.println(animal.getName() + "'s happiness level is " + animal.getHappiness());
         System.out.println(name + " is playing " + recreation.getName() + " with " + animal.getName() );
-        animal.setHappiness(animal.getHappiness()+1);
+        if (recreation.getName()==animal.getPrefActivity()){
+            animal.setHappiness(animal.getHappiness()+2);
+        }
+        else animal.setHappiness(animal.getHappiness()+1);
         System.out.println("The new happiness level is " + animal.getHappiness());
 
     }

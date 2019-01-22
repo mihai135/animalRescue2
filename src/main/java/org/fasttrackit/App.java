@@ -11,7 +11,7 @@ public class App
         food.setQuantity(3);
         food.setStock(true);
 
-        Recreation activity = new Recreation("running");
+        Recreation activity = new Recreation("ball chasing");
 
 
         Animal pet = new Animal();
@@ -20,8 +20,8 @@ public class App
         pet.setHealth(8);
         pet.setHunger(7);
         pet.setHappiness(5);
-        pet.setFoodName(food);
-        pet.setPrefActivity(activity);
+        pet.setFavFood("meat");
+        pet.setPrefActivity("running");
 
         Animal dog = new Dog();
         dog.setName("Azor");
@@ -29,8 +29,8 @@ public class App
         dog.setHealth(8);
         dog.setHunger(9);
         dog.setHappiness(2);
-        dog.setFoodName(food);
-        dog.setPrefActivity(activity);
+        dog.setFavFood("bones");
+        dog.setPrefActivity("ball chasing");
         ((Dog) dog).setFurColor("white");
 
         Animal cat = new Cat();
@@ -39,8 +39,8 @@ public class App
         cat.setHealth(8);
         cat.setHunger(5);
         cat.setHappiness(4);
-        cat.setFoodName(food);
-        cat.setPrefActivity(activity);
+        cat.setFavFood("milk");
+        cat.setPrefActivity("ribbon pursuit");
         ((Cat) cat).setFurPatern("stripes");
 
 
