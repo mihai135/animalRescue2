@@ -3,6 +3,10 @@ package org.fasttrackit;
 public class Recreation {
     private String name;
 
+    public Recreation (String name){
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
@@ -11,8 +15,6 @@ public class Recreation {
         this.name = name;
     }
 
-    public Recreation (String name){
-        this.name = name;
-    }
+
 
 }

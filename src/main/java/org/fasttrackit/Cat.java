@@ -6,7 +6,7 @@ public class Cat extends Animal {
 
     @Override
     public void happiness() {
-        System.out.println("The cat purrs");
+        System.out.println(getName() + " is happy and purrs");
     }
 
     public String getFurPatern() {

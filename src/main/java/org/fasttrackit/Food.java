@@ -8,6 +8,10 @@ public class Food {
     private int quantity;
     private boolean stock;
 
+    public Food(String name){
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }

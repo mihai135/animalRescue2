@@ -6,7 +6,7 @@ public class Dog extends Animal {
 
     @Override
     public void happiness() {
-        System.out.println("The dog moves the tail");
+        System.out.println(getName() + " is happy and moves the tail");
     }
 
     public String getFurColor() {

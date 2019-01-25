@@ -5,8 +5,7 @@ public class App
     public static void main( String[] args )
     {
 
-        Food food = new Food();
-        food.setName("bones");
+        Food food = new Food("sausage");
         food.setPrice(5);
         food.setQuantity(3);
         food.setStock(true);
@@ -64,6 +63,8 @@ public class App
         pet.happiness();
         dog.happiness();
         cat.happiness();
+
+        game.start();
 
     }
 }
