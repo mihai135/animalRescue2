@@ -64,7 +64,10 @@ public class App
         dog.happiness();
         cat.happiness();
 
-        game.start();
+        System.out.println();
+
+        game.start(game);
+
 
     }
 }

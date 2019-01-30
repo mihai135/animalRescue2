@@ -11,42 +11,45 @@ public class Game {
     private List<Food> foodList = new ArrayList<Food>();
     private Recreation[] availableRecreations = new Recreation[3];
 
-    Food food1 = new Food("meat");
-    Food food2 = new Food("bones");
-    Food food3 = new Food("milk");
-
-    Recreation activity1 = new Recreation("running");
-    Recreation activity2 = new Recreation("ball chaseing");
-    Recreation activity3 = new Recreation("hiding");
-
-    private void initRecreation(int index, Recreation recreation){
-        availableRecreations[index] = recreation;
+    private void initRecreation() {
+        Recreation activity1 = new Recreation("running");
+        Recreation activity2 = new Recreation("ball chaseing");
+        availableRecreations[0] = activity1;
+        availableRecreations[1] = activity2;
     }
 
-    private void initFood(Food food){
-        foodList.add(food);
+    private void initFood() {
+        Food food1 = new Food("meat");
+        Food food2 = new Food("bones");
+        foodList.add(food1);
+        foodList.add(food2);
     }
 
-    public void start(){
-        Game game = new Game();
-        game.initFood(food1);
-        game.initFood(food2);
-        game.initFood(food3);
-
-        game.initRecreation(0,activity1);
-        game.initRecreation(1,activity2);
-        game.initRecreation(2,activity3);
-
-        for (int i=0; i< foodList.size(); i++){
-            System.out.println(foodList.get(i));
+    public void contentList() {
+        for (int i = 0; i < foodList.size(); i++) {
+            System.out.println(foodList.get(i).getName());
         }
+    }
 
+    public void contentArray(){
         for (Recreation recreation:availableRecreations){
             if (recreation != null){
                 System.out.println(recreation.getName() );
 
             }
         }
+
+
+    }
+
+    public void start(Game game){
+        game.initFood();
+        game.initRecreation();
+        game.contentList();
+        System.out.println();
+        game.contentArray();
+
+
     }
 
 
