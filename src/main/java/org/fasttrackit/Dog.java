@@ -9,6 +9,7 @@ public class Dog extends Animal {
         System.out.println(getName() + " is happy and moves the tail");
     }
 
+
     public String getFurColor() {
         return furColor;
     }

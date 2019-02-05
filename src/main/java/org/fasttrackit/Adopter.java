@@ -5,12 +5,12 @@ public class Adopter {
     private String name;
     private int money;
 
-    public Adopter(String name, int money) {
-
-        this.name = name;
-        this.money = money;
-
-    }
+//    public Adopter(String name, int money) {
+//
+//        this.name = name;
+//        this.money = money;
+//
+//    }
 
     public void feeding (Animal animal, Food food) {
         System.out.println();
