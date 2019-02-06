@@ -10,6 +10,7 @@ public class Game {
     private Vet vet;
     private Animal animal;
     private Food food;
+    private Recreation recreation;
     private List<Food> foodList = new ArrayList<Food>();
     private Recreation[] availableRecreations = new Recreation[3];
 
@@ -29,6 +30,7 @@ public class Game {
 
     private void initRescuer(){
         Adopter rescuer = new Adopter();
+        adopter = rescuer;
         Scanner input = new Scanner(System.in);
         System.out.println("What's your name? ");
         String name = input.next();
@@ -52,25 +54,97 @@ public class Game {
         food = foodd;
         initFood();
         Scanner input = new Scanner(System.in);
-        System.out.println(animal.getName() + " is hungry. What do you give him to eat: ");
+        System.out.println(animal.getName() + " is hungry. What do you give him to eat? ");
+        System.out.println();
         contentList();
-        String name = input.next();
-        foodd.setName(name);
-        System.out.println("You feed the animal with " + foodd.getName());
+        String name = "default";
+        boolean condition;
+        do {
+            System.out.println("Enter 1,2 or 3");
+            if (input.hasNextInt()) {
+                int choice = input.nextInt();
+                if (choice == 1) {
+                    name = "meat";
+                    condition = true;
+                }
+                else if (choice == 2){
+                    name = "bones";
+                    condition = true;
+                }
+                else if (choice == 3) {
+                    name = "milk";
+                    condition = true;
+                }
+                else condition = false;
+            }
+            else {
+                condition = false;
+                input.next();
+            }
+        } while (!(condition));
+                foodd.setName(name);
+                System.out.println();
+                System.out.println("You feed the animal with " + foodd.getName());
+                adopter.feeding(animal, food);
+
+
+    }
+
+    private void requirePlaying(){
+        Recreation play = new Recreation("hiding");
+        recreation = play;
+        initRecreation();
+        Scanner input = new Scanner(System.in);
+        System.out.println();
+        System.out.println(animal.getName() + " wants to play. What game do you choose? ");
+        System.out.println();
+        contentArray();
+        String name = "default";
+        boolean condition;
+        do {
+            System.out.println("Enter 1 or 2 ");
+            if (input.hasNextInt()) {
+                int choice = input.nextInt();
+                if (choice == 1) {
+                    name = "running";
+                    condition = true;
+                }
+                else if (choice == 2){
+                    name = "ball chasing";
+                    condition = true;
+                }
+                else if (choice == 3) {
+                    name = "hide and seek";
+                    condition = true;
+                }
+                else condition = false;
+            }
+            else {
+                condition = false;
+                input.next();
+            }
+        } while (!(condition));
+        play.setName(name);
+        System.out.println();
+        System.out.println("You played " + play.getName());
+        adopter.playing(animal, recreation);
+
 
     }
 
     private void initRecreation() {
-        Recreation activity1 = new Recreation("running");
-        Recreation activity2 = new Recreation("ball chaseing");
+        Recreation activity1 = new Recreation("1. running");
+        Recreation activity2 = new Recreation("2. ball chasing");
+        Recreation activity3 = new Recreation("3. hide and seek");
         availableRecreations[0] = activity1;
         availableRecreations[1] = activity2;
+        availableRecreations[2] = activity3;
     }
 
     private void initFood() {
-        Food food1 = new Food("meat");
-        Food food2 = new Food("bones");
-        Food food3 = new Food("milk");
+        Food food1 = new Food("1. meat");
+        Food food2 = new Food("2. bones");
+        Food food3 = new Food("3. milk");
         foodList.add(food1);
         foodList.add(food2);
         foodList.add(food3);
@@ -98,6 +172,7 @@ public class Game {
         initRescuer();
         nameAnimal();
         requireFeeding();
+        requirePlaying();
 //        initFood();
 //        initRecreation();
 //        contentList();
