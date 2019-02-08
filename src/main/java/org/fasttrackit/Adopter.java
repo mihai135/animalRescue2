@@ -21,6 +21,10 @@ public class Adopter {
         if (food.getName()==animal.getFavFood()){
             animal.setHappiness(animal.getHappiness()+1);
         }
+        else if (food.getName()== "milk"){
+            animal.setHunger(animal.getHunger()+3);
+            animal.setHappiness(animal.getHappiness()-2);
+        }
         System.out.println("The new hunger level is " + animal.getHunger());
         System.out.println("The new happiness level is " + animal.getHappiness());
 

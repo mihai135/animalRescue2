@@ -13,6 +13,7 @@ public class Game {
     private Recreation recreation;
     private List<Food> foodList = new ArrayList<Food>();
     private Recreation[] availableRecreations = new Recreation[3];
+    int counter = 0;
 
 
     private void initAnimal(){
@@ -23,7 +24,7 @@ public class Game {
         dog.setHunger(6);
         dog.setHappiness(3);
         dog.setFavFood("meat");
-        dog.setPrefActivity("ball chaseing");
+        dog.setPrefActivity("ball chasing");
         ((Dog) dog).setFurColor("black");
     }
 
@@ -52,7 +53,6 @@ public class Game {
     private void requireFeeding(){
         Food foodd = new Food("sausage");
         food = foodd;
-        initFood();
         Scanner input = new Scanner(System.in);
         System.out.println(animal.getName() + " is hungry. What do you give him to eat? ");
         System.out.println();
@@ -102,7 +102,7 @@ public class Game {
         String name = "default";
         boolean condition;
         do {
-            System.out.println("Enter 1 or 2 ");
+            System.out.println("Enter 1,2 or 3 ");
             if (input.hasNextInt()) {
                 int choice = input.nextInt();
                 if (choice == 1) {
@@ -171,8 +171,20 @@ public class Game {
         initAnimal();
         initRescuer();
         nameAnimal();
-        requireFeeding();
-        requirePlaying();
+        initFood();
+        do{
+            requireFeeding();
+            requirePlaying();
+            counter++;
+        } while (counter <= 3 && animal.getHunger()<=9 && animal.getHappiness()>=0);
+        if (animal.getHunger()>=9 || animal.getHappiness()<=0){
+            System.out.println();
+            System.out.println(animal.getName() + " is unhappy and it runs away!");
+        }
+        else {
+            System.out.println();
+            System.out.println(animal.getName() + " is happy and well fed! Congratulations!");
+        }
 //        initFood();
 //        initRecreation();
 //        contentList();
