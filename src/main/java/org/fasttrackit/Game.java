@@ -1,14 +1,20 @@
 package org.fasttrackit;
 
+import org.fasttrackit.domain.Animals;
+import org.fasttrackit.service.animalRescueService;
+
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Game {
 
+    private animalRescueService animalrescueService = new animalRescueService();
     private Adopter adopter;
     private Vet vet;
-    private Animal animal;
+    private Animals animal;
     private Food food;
     private Recreation recreation;
     private List<Food> foodList = new ArrayList<Food>();
@@ -17,7 +23,7 @@ public class Game {
 
 
     private void initAnimal(){
-        Animal dog = new Dog();
+        Animals dog = new Dog();
         animal = dog;
         dog.setAge(2);
         dog.setHealth(5);
@@ -167,7 +173,7 @@ public class Game {
 
     }
 
-    public void start(){
+    public void start() throws SQLException, IOException, ClassNotFoundException {
         initAnimal();
         initRescuer();
         nameAnimal();
@@ -185,6 +191,7 @@ public class Game {
             System.out.println();
             System.out.println(animal.getName() + " is happy and well fed! Congratulations!");
         }
+        animalrescueService.createAnimals(animal);
 //        initFood();
 //        initRecreation();
 //        contentList();
@@ -211,11 +218,11 @@ public class Game {
         this.vet = vet;
     }
 
-    public Animal getAnimal() {
+    public Animals getAnimal() {
         return animal;
     }
 
-    public void setAnimal(Animal animal) {
+    public void setAnimal(Animals animal) {
         this.animal = animal;
     }
 

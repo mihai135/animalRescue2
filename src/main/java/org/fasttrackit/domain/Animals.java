@@ -1,7 +1,8 @@
-package org.fasttrackit;
+package org.fasttrackit.domain;
 
-public class Animal {
+public abstract class Animals {
 
+    private int id;
     private String name;
     private int age;
     private int health;
@@ -10,8 +11,12 @@ public class Animal {
     private String favFood;
     private String prefActivity;
 
-    public void happiness(){
-        System.out.println("The animal is happy");
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -69,4 +74,20 @@ public class Animal {
     public void setPrefActivity(String prefActivity) {
         this.prefActivity = prefActivity;
     }
+
+    @Override
+    public String toString() {
+        return "Animals{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", health=" + health +
+                ", hunger=" + hunger +
+                ", happiness=" + happiness +
+                ", favFood='" + favFood + '\'' +
+                ", prefActivity='" + prefActivity + '\'' +
+                '}';
+    }
+
+    public abstract void happiness();
 }

@@ -1,5 +1,7 @@
 package org.fasttrackit;
 
+import org.fasttrackit.domain.Animals;
+
 public class Adopter {
 
     private String name;
@@ -12,7 +14,7 @@ public class Adopter {
 //
 //    }
 
-    public void feeding (Animal animal, Food food) {
+    public void feeding (Animals animal, Food food) {
         System.out.println();
         System.out.println(animal.getName() + "'s hunger level is " + animal.getHunger());
         System.out.println(animal.getName() + "'s happiness level is " + animal.getHappiness());
@@ -30,7 +32,7 @@ public class Adopter {
 
     }
 
-    public void playing (Animal animal, Recreation recreation){
+    public void playing (Animals animal, Recreation recreation){
         System.out.println();
         System.out.println(animal.getName() + "'s happiness level is " + animal.getHappiness());
         System.out.println(name + " is playing " + recreation.getName() + " with " + animal.getName() );

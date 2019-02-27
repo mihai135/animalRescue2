@@ -1,6 +1,8 @@
 package org.fasttrackit;
 
-public class Cat extends Animal {
+import org.fasttrackit.domain.Animals;
+
+public class Cat extends Animals {
 
     private String furPatern;
 
